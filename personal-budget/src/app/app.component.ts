@@ -5,6 +5,7 @@ import { HerComponent } from './her/her.component';
 import { FooterComponent } from './footer/footer.component';
 
 
+
 @Component({
   selector: 'pb-root',
   imports: [RouterOutlet, MenuComponent, HerComponent, FooterComponent],

@@ -1,8 +1,11 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { ArticleComponent } from '../article/article.component';
 import { HttpClient } from '@angular/common/http';
-import Chart from 'chart.js/auto'
+import Chart from 'chart.js/auto';
+import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
 import { CommonModule } from '@angular/common';
+import { D3ChartComponent } from '../d3-chart/d3-chart.component';
+
 
 interface BudgetResponse {
   myBudget: { title: string; budget: number }[];
@@ -10,7 +13,7 @@ interface BudgetResponse {
 
 @Component({
   selector: 'pb-homepage',
-  imports: [ArticleComponent, CommonModule],
+  imports: [ArticleComponent, CommonModule, BreadcrumbsComponent, D3ChartComponent],
   standalone: true,
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
